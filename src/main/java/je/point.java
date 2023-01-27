@@ -14,12 +14,7 @@ class POINT1 implements Cloneable {
         this.y2 = y2;
     }
     boolean equals(){
-        if((x1==x2) && (y1==y2)){
-             return true;
-        }
-        else {
-            return false;
-        }
+        return ((x1==x2) && (y1==y2));
     }
     public Object clone()throws CloneNotSupportedException{  
         return super.clone();  
