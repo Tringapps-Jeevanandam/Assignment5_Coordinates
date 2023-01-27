@@ -7,7 +7,7 @@ class POINT1 implements Cloneable {
     float x2;
     float y1;
     float y2;
-    point1(float x1,float x2,float y1,float y2){
+    POINT1(float x1,float x2,float y1,float y2){
         this.x1 = x1;
         this.x2 = x2;
         this.y1 = y1;
@@ -27,7 +27,7 @@ class POINT1 implements Cloneable {
     
 }
 
-public class POINT{
+ class POINT{
     public static void main(String[] args) throws CloneNotSupportedException {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter x1 and y1:");
@@ -46,4 +46,3 @@ public class POINT{
 
     
 }
-
