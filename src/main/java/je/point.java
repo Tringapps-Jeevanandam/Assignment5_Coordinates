@@ -35,7 +35,8 @@ class POINT1 implements Cloneable {
         float y2 = sc.nextFloat();
         sc.close();
         POINT1 obj1 = new POINT1(x1, x2, y1, y2);
-        Log.info("Point1 equals Point2: "+obj1.equals());
+        String cmpr = "Point1 equals Point2: "+obj1.equals();
+        Log.info(cmpr);
         POINT1 obj2 = (POINT1)obj1.clone();
         String op1 = "Original Point (x1,y1) "+obj1.x1+" "+obj1.y1+" (x2,y2) "+obj1.x2+" "+obj1.y2;
         String op2 = "After Cloning (x1 ,y1) "+obj2.x1+" "+obj2.y1+" (x2,y2) "+obj2.x2+" "+obj2.y2;
