@@ -1,6 +1,7 @@
 package je;
 
 import java.util.*;
+import java.util.logging.Logger;
 
 class POINT1 implements Cloneable {
     float x1;
@@ -23,20 +24,23 @@ class POINT1 implements Cloneable {
 }
 
  class POINT{
+    public static final Logger Log = Logger.getLogger("InfoLogging");
     public static void main(String[] args) throws CloneNotSupportedException {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter x1 and y1:");
+        Log.info("Enter x1 and y1:");
         float x1 = sc.nextFloat();
         float y1 = sc.nextFloat();
-        System.out.println("Enter x2 and y2:");
+        Log.info("Enter x2 and y2:");
         float x2 = sc.nextFloat();
         float y2 = sc.nextFloat();
         sc.close();
         POINT1 obj1 = new POINT1(x1, x2, y1, y2);
-        System.out.println("Point1 equals Point2: "+obj1.equals());
+        Log.info("Point1 equals Point2: "+obj1.equals());
         POINT1 obj2 = (POINT1)obj1.clone();
-        System.out.println("Original Point (x1,y1) "+obj1.x1+" "+obj1.y1+" (x2,y2) "+obj1.x2+" "+obj1.y2);
-        System.out.println("After Cloning (x1 ,y1) "+obj2.x1+" "+obj2.y1+" (x2,y2) "+obj2.x2+" "+obj2.y2);
+        String op1 = "Original Point (x1,y1) "+obj1.x1+" "+obj1.y1+" (x2,y2) "+obj1.x2+" "+obj1.y2;
+        String op2 = "After Cloning (x1 ,y1) "+obj2.x1+" "+obj2.y1+" (x2,y2) "+obj2.x2+" "+obj2.y2;
+        Log.info(op1);
+        Log.info(op2);
     }
 
     
