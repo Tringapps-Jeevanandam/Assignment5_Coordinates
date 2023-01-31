@@ -27,7 +27,6 @@ class POINT1 implements Cloneable {
     public static final Logger Log = Logger.getLogger("InfoLogging");
     public static void main(String[] args) throws CloneNotSupportedException {
         Scanner sc = new Scanner(System.in);
-        try{
         Log.info("Enter x1 and y1:");
         float x1 = sc.nextFloat();
         float y1 = sc.nextFloat();
@@ -35,11 +34,6 @@ class POINT1 implements Cloneable {
         float x2 = sc.nextFloat();
         float y2 = sc.nextFloat();
         sc.close();
-        }
-        catch(Exception e){
-            String exp = "Exception:"+e;
-            Log.info(exp);
-        }
         POINT1 obj1 = new POINT1(x1, x2, y1, y2);
         String cmpr = "Point1 equals Point2: "+obj1.equals();
         Log.info(cmpr);
