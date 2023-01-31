@@ -36,7 +36,6 @@ class POINT1  {
         float y1;
         float y2;
         Scanner sc = new Scanner(System.in);
-        try{
         Log.info("Enter x1 and y1:");
          x1 = sc.nextFloat();
          y1 = sc.nextFloat();
@@ -53,12 +52,8 @@ class POINT1  {
         String op2 = "After Cloning (x1 ,y1) "+obj2.x1+" "+obj2.y1+" (x2,y2) "+obj2.x2+" "+obj2.y2;
         Log.info(op1);
         Log.info(op2);
-    } 
-    catch(Exception e){
-        String exp = "Exception:"+e;
-        Log.info(exp);
-    }
-}  
+   
+  }  
 
     
 }
